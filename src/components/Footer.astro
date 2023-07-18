@@ -1,0 +1,31 @@
+---
+import Social from './Social.astro';
+
+const platform = "github";
+const username = "z0CoolCS";
+
+---
+
+<style>
+    footer {
+      display: center;
+      /* position: fixed; */
+      bottom: 0;
+      padding: 0.5%;
+      /* widows: 100%;
+      background-color: aquamarine; */
+      gap: 1rem;
+      margin-top: 2rem;
+      /* text-align: center; */
+    }
+</style>
+
+
+<footer>
+  <!-- <p>Learn more about my projects on <a href={`https://www.${platform}.com/${username}`}>{platform}</a>!</p> -->
+
+  <Social platform="twitter" username="astrodotbuild" />
+  <Social platform="github" username="withastro" />
+  <Social platform="youtube" username="astrodotbuild" />
+</footer>
+

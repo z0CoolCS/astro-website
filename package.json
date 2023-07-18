@@ -8,10 +8,10 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test" : "echo $hello!"
-
+    "test": "echo $hello!"
   },
   "dependencies": {
+    "@astrojs/rss": "^2.4.3",
     "astro": "^2.8.3"
   }
 }
