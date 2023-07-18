@@ -1,3 +1,9 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 html {
   background-color: #f1f5f9;
   font-family: sans-serif;
@@ -19,7 +25,8 @@ html.dark {
 body {
   margin: 0 auto;
   width: 100%;
-  max-width: 80ch;
+  /* max-width: 80ch; */
+  max-width: 80%;
   padding: 1rem;
   line-height: 1.5;
 }
@@ -76,6 +83,26 @@ h1 {
 
 .expanded {
   display: unset;
+}
+
+code {
+  /* background: #F8FCFD; */
+  display: block;
+  margin: 0.5%;
+}
+
+.copy-code {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #f1f5f9;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.copy-code:hover {
+  background-color: #78bde1;
 }
 
 @media screen and (min-width: 636px) {

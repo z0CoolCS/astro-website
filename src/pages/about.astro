@@ -21,8 +21,9 @@ const skillColor = "navy";
 const fontWeight = "bold";
 ---
 
+
 <BaseLayout pageTitle={pageTitle}>
-        <h2>... and my new Astro site!</h2>
+        <h2 class="font-bold text-3xl">... and my new Astro site!</h2>
       
         <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
       
@@ -41,7 +42,7 @@ const fontWeight = "bold";
         </ul>
         <p>My skills are:</p>
         <ul>
-            {skills.map((skill) => <li class="skill">{skill}</li>)}
+            {skills.map((skill) => <li class="skill list-disc">{skill}</li>)}
         </ul>
 
         {happy && <p>I am happy to be learning Astro!</p>}

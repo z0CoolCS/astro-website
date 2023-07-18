@@ -23,19 +23,26 @@ export async function getStaticPaths() {
     };
   });
 }
-  
+
 const { tag } = Astro.params;
 const { posts } = Astro.props;
 // const filteredPosts = posts.filter((post) => post.frontmatter.tags?.includes(tag));
 ---
 <BaseLayout pageTitle={tag}>
     <p>Posts tagged with {tag}</p>
-    <ul>
+    <div class="grid grid-flow-row gap-8 text-neutral-600 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
       <!-- {filteredPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)} -->
       <!-- {filteredPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title}/>)} -->
-      {posts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title}/>)}
+      {posts.map((post) => <BlogPost 
+              url={post.url} 
+              title={post.frontmatter.title} 
+              description={post.frontmatter.description} 
+              image_url={post.frontmatter.image.url} 
+              image_alt={post.frontmatter.image.alt}
+        />)}
 
 
-    </ul>
+      </div>
   
 </BaseLayout>

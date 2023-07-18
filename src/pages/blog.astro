@@ -11,15 +11,9 @@ const pageTitle = "My Astro Learning Blog";
 <BaseLayout pageTitle={pageTitle}>
     
     <p>This is where I will post about my journey learning Astro.</p>
-    <ul>
+    <div class="grid grid-flow-row gap-8 text-neutral-600 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         <!-- {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)} -->
-        {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
-
-        
-
-    </ul>
-    
-    <BlogPost title="My First Blog" author="Gio" date = "12 Aug 2022"/>
-
+        {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} image_url={post.frontmatter.image.url} image_alt={post.frontmatter.image.alt} />)}
+    </div>
     
 </BaseLayout>
